@@ -13,11 +13,11 @@
  :rss-filters        ["cryogen"]
  :recent-posts       3
  :post-date-format   "yyyy-MM-dd"
- :sass-src           nil
- :sass-dest          nil
- :theme              "nucleus"
+ :sass-src           "themes/anucc/css" 
+ :sass-dest          "css"
+ :theme              "anucc"
  :resources          ["img"]
- :keep-files         [".git"]
+ :keep-files         [".git" ".gitignore"]
  :disqus?            false
  :disqus-shortname   ""
  :ignored-files      [#"\.#.*" #".*\.swp$"]
