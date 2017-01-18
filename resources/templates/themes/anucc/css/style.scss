@@ -137,3 +137,50 @@ span.backed {
       font-weight: bold;
     }
 }
+
+.projects.list {
+  .project {
+    display: inline-block;
+    width: col-width(6);
+    padding-left: col-width(1);
+    padding-right: col-width(1);
+    box-sizing: border-box;
+  }
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-arrow {
+
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 0;
+  color: rgba(0,0,0,0);
+  border: 1px solid black;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1;
+ 
+  &:after {
+    font-size: 20px;
+    color: black;
+  }
+
+  &.slick-next:after {
+    content: "→";
+  }
+  &.slick-prev:after {
+    content: "←";
+  }
+
+  &.slick-next {
+    right: 0;
+  }
+}

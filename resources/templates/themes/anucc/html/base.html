@@ -17,11 +17,10 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
     <link rel="shortcut icon" href="images/ico/favicon.png">
     <!--[if IE]><![endif]-->
-    {% style "css/buttons.css" %}
-    {% style "css/menu.css" %}
-    {% style "css/reset.css" %}
     {% style "css/style.css" %}
-    {% style "css/typography.css" %}
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow-night-eighties.min.css">
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -49,77 +48,10 @@
     </div>
   </div>
 
+    {% block content %}
+    {% endblock %}
 
-  <div class="grid">
-    <div class="col-1"></div>
-    <div class="col-9">
-      <p class="mission-statement">Ipsum nostrum consectetur velit enim maiores vitae. Explicabo perspiciatis non sed velit excepturi Dolore soluta ipsum architecto at accusantium blanditiis?</p>
-    </div>
-  </div>
 
-  <div class="grid">
-    <div class="col-7"></div>
-    <div class="col-13" style="background: black">
-      <h2 class="very-large">Artists who code<br>
-        - - - <br>
-      Coders who art</h2>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="col-20">
-      <h2>Projects</h2>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-6 left-stripe">
-      <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
-      <p class="info">Bone Music<br>
-      By <a href="">Jon McCabe &rarr;</a>
-      </p>
-    </div>
-    <div class="col-6 left-stripe">
-      <img src="http://i.telegraph.co.uk/multimedia/archive/01911/e-coli-code_1911930c.jpg" alt="">
-      <p class="info">E-Coli<br>
-      By <a href="">Jane Citizen &rarr;</a>
-    </div>
-    <div class="col-6 left-stripe">
-      <img src="http://1m021b21rhkw44qvpa3igdua.wpengine.netdna-cdn.com/files/2014/11/livecoding-300x225.jpg" alt="">
-      <p class="info">Live Code Session<br>
-      By <a href="">Ben Swift &rarr;</a>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="col-20 h1c"></div>
-    <div class="col-13" style="background: white">
-      <h2 class="very-large">Artists who code<br>
-        - - - <br>
-      Coders who art</h2>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="col-20">
-      <h2>Posts</h2>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-6 left-stripe">
-      <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
-      <p class="info">Bone Music<br>
-      By <a href="">Jon McCabe &rarr;</a>
-      </p>
-    </div>
-    <div class="col-6 left-stripe">
-      <img src="http://i.telegraph.co.uk/multimedia/archive/01911/e-coli-code_1911930c.jpg" alt="">
-      <p class="info">E-Coli<br>
-      By <a href="">Jane Citizen &rarr;</a>
-    </div>
-    <div class="col-6 left-stripe">
-      <img src="http://1m021b21rhkw44qvpa3igdua.wpengine.netdna-cdn.com/files/2014/11/livecoding-300x225.jpg" alt="">
-      <p class="info">Live Code Session<br>
-      By <a href="">Ben Swift &rarr;</a>
-    </div>
-  </div>
 
   <div class="grid footer">
     <div class="col-1"></div>
@@ -181,7 +113,6 @@
 
 <!-- </div> -->
 <!-- </div> -->
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 {% script "js/highlight.pack.js" %}
 <script>hljs.initHighlightingOnLoad();</script>
 {% script "js/scripts.js" %}

@@ -1,20 +1,119 @@
 {% extends "/html/base.html" %}
 {% block content %}
-<div id="post">
-    {% include "/html/post-content.html" %}
-    {% if disqus? %}
-    <div id="comments">
-        <a href="{{post.uri}}#disqus_thread">View Comments</a>
-    </div>
-    {% endif %}
 
-    <div id="prev-next">
-        {% if post.prev %}
-        <a class="button" href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a>
-        {% endif %}
-        {% if post.next %}
-        <a class="button right" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a>
-        {% endif %}
+
+  <div class="grid">
+    <div class="col-1"></div>
+    <div class="col-9">
+      <p class="mission-statement">Ipsum nostrum consectetur velit enim maiores vitae. Explicabo perspiciatis non sed velit excepturi Dolore soluta ipsum architecto at accusantium blanditiis?</p>
     </div>
-</div>
+  </div>
+
+  <div class="grid">
+    <div class="col-7"></div>
+    <div class="col-13" style="background: black">
+      <h2 class="very-large">Artists who code<br>
+        - - - <br>
+      Coders who art</h2>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-20">
+      <h2>Projects</h2>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-18 projects list">
+        <div class="project">
+          <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
+          <p class="info">Bone Music<br>
+          By <a href="">Jon McCabe &rarr;</a></p>
+          </p>
+        </div>
+        <div class="project">
+          <img src="http://i.telegraph.co.uk/multimedia/archive/01911/e-coli-code_1911930c.jpg" alt="">
+          <p class="info">E-Coli<br>
+          By <a href="">Jane Citizen &rarr;</a></p>
+        </div>
+        <div class="project">
+          <img src="http://1m021b21rhkw44qvpa3igdua.wpengine.netdna-cdn.com/files/2014/11/livecoding-300x225.jpg" alt="">
+          <p class="info">Live Code Session<br>
+          By <a href="">Ben Swift &rarr;</a></p>
+        </div>
+        <div class="project">
+          <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
+          <p class="info">Bone Music<br>
+          By <a href="">Jon McCabe &rarr;</a></p>
+          </p>
+        </div>
+        <div class="project">
+          <img src="http://i.telegraph.co.uk/multimedia/archive/01911/e-coli-code_1911930c.jpg" alt="">
+          <p class="info">E-Coli<br>
+          By <a href="">Jane Citizen &rarr;</a></p>
+        </div>
+        <div class="project">
+          <p class="info">
+          <a href="">View All &rarr;</a></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-20 h1c"></div>
+    <div class="col-13" style="background: white">
+      <h2 class="very-large">Artists who code<br>
+        - - - <br>
+      Coders who art</h2>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-20">
+      <h2>Posts</h2>
+    </div>
+    <div class="col-1"></div>
+
+
+    {% for p in posts %}
+        <div class="col-6 left-stripe">
+            <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
+            <p class="info">Bone Music<br>
+            By <a href="">Jon McCabe &rarr;</a>
+            </p>
+        </div>
+    {% endfor %}
+  </div>
+
+
+<!-- <div id="post"> -->
+<!--     {% include "/html/post-content.html" %} -->
+<!--     {% if disqus? %} -->
+<!--     <div id="comments"> -->
+<!--         <a href="{{post.uri}}#disqus_thread">View Comments</a> -->
+<!--     </div> -->
+<!--     {% endif %} -->
+
+<!--     <div id="prev-next"> -->
+<!--         {% if post.prev %} -->
+<!--         <a class="button" href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a> -->
+<!--         {% endif %} -->
+<!--         {% if post.next %} -->
+<!--         <a class="button right" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a> -->
+<!--         {% endif %} -->
+<!--     </div> -->
+<!-- </div> -->
+
+
+<script>
+$('.projects.list').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true
+});
+</script>
+
 {% endblock %}
+
+
+
