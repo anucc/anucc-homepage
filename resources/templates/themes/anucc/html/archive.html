@@ -11,12 +11,7 @@
 
     {% for post in latest-posts %}
       {% ifequal post.collection page.collection %}
-        <div class="col-6 col-sm-18 left-stripe">
-            <img src="{{ post.thumbnail }}" alt="">
-            <p class="info">{{post.title}}<br>
-            By <a href="{{post.uri}}">{{post.author}} &rarr;</a>
-            </p>
-        </div>
+        {% include /html/post-tile.html %}
       {% endifequal %}
     {% endfor %}
     

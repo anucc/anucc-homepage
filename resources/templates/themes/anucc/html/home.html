@@ -25,38 +25,16 @@
       <h2>Projects</h2>
     </div>
     <div class="col-1"></div>
-    <div class="col-18 projects list">
-        <div class="project">
-          <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
-          <p class="info">Bone Music<br>
-          By <a href="">Jon McCabe &rarr;</a></p>
-          </p>
-        </div>
-        <div class="project">
-          <img src="http://i.telegraph.co.uk/multimedia/archive/01911/e-coli-code_1911930c.jpg" alt="">
-          <p class="info">E-Coli<br>
-          By <a href="">Jane Citizen &rarr;</a></p>
-        </div>
-        <div class="project">
-          <img src="http://1m021b21rhkw44qvpa3igdua.wpengine.netdna-cdn.com/files/2014/11/livecoding-300x225.jpg" alt="">
-          <p class="info">Live Code Session<br>
-          By <a href="">Ben Swift &rarr;</a></p>
-        </div>
-        <div class="project">
-          <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
-          <p class="info">Bone Music<br>
-          By <a href="">Jon McCabe &rarr;</a></p>
-          </p>
-        </div>
-        <div class="project">
-          <img src="http://i.telegraph.co.uk/multimedia/archive/01911/e-coli-code_1911930c.jpg" alt="">
-          <p class="info">E-Coli<br>
-          By <a href="">Jane Citizen &rarr;</a></p>
-        </div>
-        <div class="project">
-          <p class="info">
-          <a href="">View All &rarr;</a></p>
-        </div>
+
+    {% for post in latest-posts %}
+      {% ifequal post.collection "projects" %}
+        {% include /html/post-tile.html %}
+      {% endifequal %}
+    {% endfor %}
+
+    <div class="project">
+      <p class="info">
+      <a href="/pages/projects/">View All Projects &rarr;</a></p>
     </div>
   </div>
 
@@ -78,12 +56,7 @@
 
     {% for post in latest-posts %}
       {% ifequal post.collection "projects" %}
-        <div class="col-6 col-sm-18 left-stripe">
-            <img src="{{ post.thumbnail }}" alt="">
-            <p class="info">{{post.title}}<br>
-            By <a href="{{post.uri}}">{{post.author}} &rarr;</a>
-            </p>
-        </div>
+        {% include /html/post-tile.html %}
       {% endifequal %}
     {% endfor %}
   </div>
