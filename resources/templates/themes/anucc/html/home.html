@@ -74,13 +74,15 @@
     <div class="col-1"></div>
 
 
-    {% for p in posts %}
+    {% for post in latest-posts %}
+      {% ifequal post.collection "projects" %}
         <div class="col-6 left-stripe">
             <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
-            <p class="info">Bone Music<br>
-            By <a href="">Jon McCabe &rarr;</a>
+            <p class="info">{{post.title}}<br>
+            By <a href="">{{post.author}} &rarr;</a>
             </p>
         </div>
+      {% endifequal %}
     {% endfor %}
   </div>
 
@@ -114,6 +116,4 @@ $('.projects.list').slick({
 </script>
 
 {% endblock %}
-
-
 

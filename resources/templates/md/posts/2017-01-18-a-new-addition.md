@@ -1,6 +1,9 @@
 {:title "A new addition to the ANUCC group"
  :layout :post
- :tags  []}
+ :tags  []
+ :author "Ben Swift"
+ :collection "projects"
+}
 
 ## Welcome Kieran
 
