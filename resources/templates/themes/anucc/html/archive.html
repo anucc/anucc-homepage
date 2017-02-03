@@ -1,0 +1,28 @@
+{% extends "/html/base.html" %}
+{% block content %}
+
+
+  <div class="grid">
+    <div class="col-20">
+        <h2>{{page.title}}</h2>
+    </div>
+
+    <div class="col-1"></div>
+
+    {% for post in latest-posts %}
+      {% ifequal post.collection page.collection %}
+        <div class="col-6 col-sm-18 left-stripe">
+            <img src="{{ post.thumbnail }}" alt="">
+            <p class="info">{{post.title}}<br>
+            By <a href="{{post.uri}}">{{post.author}} &rarr;</a>
+            </p>
+        </div>
+      {% endifequal %}
+    {% endfor %}
+    
+  </div>
+
+
+
+{% endblock %}
+

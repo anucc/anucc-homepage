@@ -5,13 +5,15 @@
   <div class="grid">
     <div class="col-1"></div>
     <div class="col-9">
-      <p class="mission-statement">Ipsum nostrum consectetur velit enim maiores vitae. Explicabo perspiciatis non sed velit excepturi Dolore soluta ipsum architecto at accusantium blanditiis?</p>
+      <p class="mission-statement">
+      Artists, makers, coders &mdash; we all must return to craftsmanship! For there is no such thing as “art by profession". There is no essential difference between the artist and the artisan. The artist is an exalted artisan.
+      </p>
     </div>
   </div>
 
   <div class="grid">
-    <div class="col-7"></div>
-    <div class="col-13" style="background: black">
+    <div class="col-7 col-sm-1"></div>
+    <div class="col-13 col-sm-19" style="background: black">
       <h2 class="very-large">Artists who code<br>
         - - - <br>
       Coders who art</h2>
@@ -60,7 +62,7 @@
 
   <div class="grid">
     <div class="col-20 h1c"></div>
-    <div class="col-13" style="background: white">
+    <div class="col-13 col-sm-19" style="background: white">
       <h2 class="very-large">Artists who code<br>
         - - - <br>
       Coders who art</h2>
@@ -71,39 +73,21 @@
     <div class="col-20">
       <h2>Posts</h2>
     </div>
-    <div class="col-1"></div>
+    <div class="col-1 col-sm-0"></div>
 
 
     {% for post in latest-posts %}
       {% ifequal post.collection "projects" %}
-        <div class="col-6 left-stripe">
-            <img src="http://dataisnature.com/images/20130529u.jpg" alt="">
+        <div class="col-6 col-sm-18 left-stripe">
+            <img src="{{ post.thumbnail }}" alt="">
             <p class="info">{{post.title}}<br>
-            By <a href="">{{post.author}} &rarr;</a>
+            By <a href="{{post.uri}}">{{post.author}} &rarr;</a>
             </p>
         </div>
       {% endifequal %}
     {% endfor %}
   </div>
 
-
-<!-- <div id="post"> -->
-<!--     {% include "/html/post-content.html" %} -->
-<!--     {% if disqus? %} -->
-<!--     <div id="comments"> -->
-<!--         <a href="{{post.uri}}#disqus_thread">View Comments</a> -->
-<!--     </div> -->
-<!--     {% endif %} -->
-
-<!--     <div id="prev-next"> -->
-<!--         {% if post.prev %} -->
-<!--         <a class="button" href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a> -->
-<!--         {% endif %} -->
-<!--         {% if post.next %} -->
-<!--         <a class="button right" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a> -->
-<!--         {% endif %} -->
-<!--     </div> -->
-<!-- </div> -->
 
 
 <script>

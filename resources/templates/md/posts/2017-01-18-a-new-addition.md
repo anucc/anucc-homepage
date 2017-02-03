@@ -3,6 +3,7 @@
  :tags  []
  :author "Ben Swift"
  :collection "projects"
+ :thumbnail "http://dataisnature.com/images/20130529u.jpg"
 }
 
 ## Welcome Kieran

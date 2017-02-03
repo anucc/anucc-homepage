@@ -1,6 +1,5 @@
 {:title "About ANUCC"
- :layout :home
- :home? true
+ :layout :page
  :page-index 0
  :navbar? true}
 
