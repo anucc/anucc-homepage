@@ -3,16 +3,15 @@
 
 
   <div class="grid">
+    <div class="col-20" style="height: 2rem"></div>
     <div class="col-1"></div>
-    <div class="col-9">
+    <div class="col-5 col-sm-12 col-xs-18">
       <p class="mission-statement">
       Artists, makers, coders &mdash; we all must return to craftsmanship! For there is no such thing as “art by profession". There is no essential difference between the artist and the artisan. The artist is an exalted artisan.
       </p>
     </div>
-  </div>
-
-  <div class="grid">
-    <div class="col-7 col-sm-1"></div>
+    <div class="col-1 col-sm-20"></div>
+    <div class="col-0 col-sm-1"></div>
     <div class="col-13 col-sm-19" style="background: black">
       <h2 class="very-large">Artists who code<br>
         - - - <br>
@@ -21,21 +20,33 @@
   </div>
 
   <div class="grid">
+    <div class="col-20" style="height: 2rem"></div>
+  </div>
+
+  <div class="grid">
     <div class="col-20">
       <h2>Projects</h2>
     </div>
     <div class="col-1"></div>
+    <div class="col-18 slider">
+        {% for post in latest-posts %}
+          {% ifequal post.collection "projects" %}
+            {% include /html/post-tile.html %}
+          {% endifequal %}
+        {% endfor %}
+        <div class="col-6 col-sm-18 left-pad">
+          <p class="info">
+          <a href="/pages/projects/">View All Projects &rarr;</a></p>
+        </div>
 
-    {% for post in latest-posts %}
-      {% ifequal post.collection "projects" %}
-        {% include /html/post-tile.html %}
-      {% endifequal %}
-    {% endfor %}
-
-    <div class="project">
-      <p class="info">
-      <a href="/pages/projects/">View All Projects &rarr;</a></p>
+        <div class="col-6 col-sm-18 left-pad">
+          <p class="info">
+          <a href="/pages/projects/">View All Projects &rarr;</a></p>
+        </div>
     </div>
+
+
+    <div class="col-20" style="height: 2rem"></div>
   </div>
 
   <div class="grid">
@@ -48,27 +59,45 @@
   </div>
 
   <div class="grid">
+    <div class="col-20" style="height: 2rem"></div>
     <div class="col-20">
       <h2>Posts</h2>
     </div>
-    <div class="col-1 col-sm-0"></div>
+    <div class="col-1"></div>
 
 
-    {% for post in latest-posts %}
-      {% ifequal post.collection "projects" %}
+    <div class="col-18 slider">
+        {% for post in latest-posts %}
+        {% ifequal post.collection "posts" %}
         {% include /html/post-tile.html %}
-      {% endifequal %}
-    {% endfor %}
+        {% endifequal %}
+        {% endfor %}
+
+        <div class="col-6 col-sm-18 left-pad">
+            <p class="info">
+            <a href="/pages/posts/">View All Posts &rarr;</a></p>
+        </div>
+    </div>
+
   </div>
 
 
 
 <script>
-$('.projects.list').slick({
+$('.slider').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    arrows: true
+    arrows: true,
+    responsive: [
+    {
+        breakpoint: 900,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true
+        }
+    }]
 });
 </script>
 

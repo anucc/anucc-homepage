@@ -78,8 +78,7 @@ a {
   padding-left: col-width(1);
 }
 
-.left-stripe {
-  border-left: 1px solid #ccc;
+.left-pad {
   padding-left: col-width(1);
   padding-right: col-width(1);
   box-sizing: border-box;
@@ -87,6 +86,11 @@ a {
   &.col-1 {
     padding: 0;
   }
+}
+
+.left-stripe {
+  @extend .left-pad;
+  border-left: 1px solid #ccc;
 }
 
 img {
@@ -206,5 +210,25 @@ span.backed {
   }
   .very-large {
     @include baseline(2.3rem,2rem,3rem,1.5rem);
+  }
+}
+
+.post-tile {
+  .img {
+    margin-top: 2rem;
+
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      margin-top: 0;
+      object-fit: cover;
+      position: absolute;
+      left: 0; right: 0;
+      top: 0; bottom: 0;
+    }
   }
 }
