@@ -7,7 +7,7 @@
     <div class="col-1"></div>
     <div class="col-5 col-sm-12 col-xs-18">
       <p class="mission-statement">
-      Artists, makers, coders &mdash; we all must return to craftsmanship! For there is no such thing as “art by profession". There is no essential difference between the artist and the artisan. The artist is an exalted artisan.
+      ANUCC is a community of artists and programmers at the Australian National University interested in the potential of technology to create new forms of art and performance. We meet monthly and all are welcome. Contact <a href="mailto:ben.swift@anu.edu.au">Ben Swift</a> to get involved.
       </p>
     </div>
     <div class="col-1 col-sm-20"></div>
@@ -25,7 +25,7 @@
 
   <div class="grid">
     <div class="col-20">
-      <h2>Projects</h2>
+      <h2 class="pl2c">Projects</h2>
     </div>
     <div class="col-1"></div>
     <div class="col-18 slider">
@@ -34,14 +34,12 @@
             {% include /html/post-tile.html %}
           {% endifequal %}
         {% endfor %}
-        <div class="col-6 col-sm-18 left-pad">
+        <div class="col-6 col-sm-18 left-pad post-tile">
+          <div class="img">
+            <img src="{{ post.thumbnail }}" alt="">
+          </div>
           <p class="info">
-          <a href="/pages/projects/">View All Projects &rarr;</a></p>
-        </div>
-
-        <div class="col-6 col-sm-18 left-pad">
-          <p class="info">
-          <a href="/pages/projects/">View All Projects &rarr;</a></p>
+            <a href="/pages/projects/">View All Projects &rarr;</a></p>
         </div>
     </div>
 
@@ -61,7 +59,7 @@
   <div class="grid">
     <div class="col-20" style="height: 2rem"></div>
     <div class="col-20">
-      <h2>Posts</h2>
+      <h2 class="pl2c">Posts</h2>
     </div>
     <div class="col-1"></div>
 
@@ -73,9 +71,12 @@
         {% endifequal %}
         {% endfor %}
 
-        <div class="col-6 col-sm-18 left-pad">
-            <p class="info">
-            <a href="/pages/posts/">View All Posts &rarr;</a></p>
+        <div class="col-6 col-sm-18 left-pad post-tile">
+          <div class="img">
+            <img src="{{ post.thumbnail }}" alt="">
+          </div>
+          <p class="info">
+            <a href="/pages/projects/">View All Projects &rarr;</a></p>
         </div>
     </div>
 
@@ -93,11 +94,20 @@ $('.slider').slick({
     {
         breakpoint: 900,
         settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true
+        }
+    },
+    {
+        breakpoint: 550,
+        settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true
         }
-    }]
+    }
+    ]
 });
 </script>
 
